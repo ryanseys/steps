@@ -1,0 +1,8 @@
+{
+  "name": "steps",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "jawbone-up": "0.0.1"
+  }
+}
