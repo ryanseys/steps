@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
-    "jawbone-up": "0.0.1"
+    "jawbone-up": "0.0.1",
+    "express": "~3.4.8"
   }
 }
