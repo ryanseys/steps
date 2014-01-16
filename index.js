@@ -4,14 +4,41 @@
  */
 
 var express = require('express');
+var routes = require('./routes');
+var http = require('http');
+var path = require('path');
 var app = express();
-const up = require('jawbone-up')({access_token : process.env.UP_ACCESS_TOKEN});
+
+app.set('port', process.env.PORT || 3000);
+app.set('views', __dirname + '/views');
+app.set('view engine', 'jade');
+app.use(express.favicon());
+app.use(express.logger('dev'));
+app.use(express.bodyParser());
+app.use(express.methodOverride());
+app.use(app.router);
+app.use(express.static(path.join(__dirname, 'public')));
+
+if ('development' == app.get('env')) {
+  app.use(express.errorHandler());
+}
+
+app.get('/', function(req, res) {
+  getSteps('ryanseys', function(steps) {
+    res.render('index', { title: 'Steps', steps: steps });
+    // steps = steps + '';
+    // res.setHeader('Content-Type', 'text/plain');
+    // res.setHeader('Content-Length', Buffer.byteLength(steps));
+    // res.end(steps);
+  });
+});
+
+var up = require('jawbone-up')({access_token : process.env.UP_ACCESS_TOKEN});
 
 var db = {
   'ryanseys': {
     last_sync_date: null,
-    steps_historic: 0,
-    // steps_last_sync_date: 0
+    steps_historic: 0
   }
 };
 
@@ -69,14 +96,7 @@ function get_moves(limit, callback) {
   });
 }
 
-app.get('/', function(req, res) {
-  getSteps('ryanseys', function(steps) {
-    steps = steps + '';
-    res.setHeader('Content-Type', 'text/plain');
-    res.setHeader('Content-Length', Buffer.byteLength(steps));
-    res.end(steps);
-  });
+http.createServer(app).listen(app.get('port'), function(){
+  console.log('Express server listening on port ' + app.get('port'));
 });
 
-app.listen(3000);
-console.log('Listening on port 3000');

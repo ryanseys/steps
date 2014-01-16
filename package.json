@@ -2,8 +2,11 @@
   "name": "steps",
   "version": "0.0.1",
   "private": true,
+  "scripts": {
+    "start": "node index.js"
+  },
   "dependencies": {
-    "jawbone-up": "0.0.1",
-    "express": "~3.4.8"
+    "express": "3.3.8",
+    "jade": "*"
   }
 }
