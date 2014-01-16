@@ -25,7 +25,7 @@ a {
 
 .steps {
   text-align: center;
-  font-size: 120pt;
+  font-size: 100pt;
   position: relative;
   top:110px;
   color: white;
@@ -33,7 +33,7 @@ a {
   text-shadow: 3px 3px #5B5B5B;
 }
 .stepslabel {
-  font-size: 30pt;
+  font-size: 28pt;
 }
 
 .km {
@@ -41,28 +41,4 @@ a {
   text-align: center;
   font-size: 30pt;
   text-shadow: 2px 2px #5b5b5b;
-}
-
-.signin {
-  position: relative;
-  top: 180px;
-  font-family: 'Varela';
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  width: 160px;
-  height: 54px;
-  padding-top: 30px;
-  font-size: 16pt;
-  color: white;
-  text-shadow: 1px 1px #090909;
-  border-radius: 20px;
-  background-color: #FC7A02;
-  box-shadow: 2px 2px 1px #494545;
-  cursor: pointer;
-  opacity: 0.8;
-}
-
-.signin:hover {
-  opacity: 1;
 }

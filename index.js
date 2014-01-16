@@ -34,9 +34,9 @@ app.get('/', function(req, res) {
     else {
       res.render('index', {
         title: 'Steps',
-        steps: data.steps,
-        km: Math.round(data.km),
-        cal: Math.round(data.cal)
+        steps: data.steps.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
+        km: Math.round(data.km).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","),
+        cal: Math.round(data.cal).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
       });
     }
   });
