@@ -1,6 +1,6 @@
 body {
   padding-left: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px "Varela", Helvetica, Arial, sans-serif;
 }
 
 html {
@@ -16,7 +16,7 @@ a {
 }
 
 .title {
-  font-family: 'Duru Sans';
+  font-family: 'Varela';
   font-size: 30pt;
   color:white;
   position:relative;
@@ -31,4 +31,28 @@ a {
   color: white;
   font-family: 'Duru Sans';
   text-shadow: 3px 3px #5B5B5B;
+}
+
+.signin {
+  position: relative;
+  top: 180px;
+  font-family: 'Varela';
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 160px;
+  height: 54px;
+  padding-top: 30px;
+  font-size: 16pt;
+  color: white;
+  text-shadow: 1px 1px #090909;
+  border-radius: 20px;
+  background-color: #FC7A02;
+  box-shadow: 2px 2px 1px #494545;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.signin:hover {
+  opacity: 1;
 }

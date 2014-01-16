@@ -25,11 +25,12 @@ if ('development' == app.get('env')) {
 
 app.get('/', function(req, res) {
   getSteps('ryanseys', function(steps) {
-    res.render('index', { title: 'Steps', steps: steps });
-    // steps = steps + '';
-    // res.setHeader('Content-Type', 'text/plain');
-    // res.setHeader('Content-Length', Buffer.byteLength(steps));
-    // res.end(steps);
+    if(steps === -1) {
+      res.render('index', { title: 'Steps', steps: 'An error occurred :(' });
+    }
+    else {
+      res.render('index', { title: 'Steps', steps: steps });
+    }
   });
 });
 
