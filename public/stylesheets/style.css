@@ -4,7 +4,7 @@ body {
 }
 
 html {
-  background: url("/img/bg.jpg") no-repeat center fixed;
+  background: url("/img/bg2.jpg") no-repeat center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -20,14 +20,15 @@ a {
   font-size: 30pt;
   color:white;
   position:relative;
-  /*top:-10px;*/
+  text-shadow: 2px 2px #5B5B5B;
 }
 
-.center {
+.steps {
   text-align: center;
   font-size: 120pt;
   position: relative;
   top:110px;
   color: white;
   font-family: 'Duru Sans';
+  text-shadow: 3px 3px #5B5B5B;
 }
