@@ -1,6 +1,6 @@
 body {
   padding-left: 50px;
-  font: 14px "Varela", Helvetica, Arial, sans-serif;
+  font: 14px 'Varela', Helvetica, Arial, sans-serif;
 }
 
 html {
@@ -29,8 +29,18 @@ a {
   position: relative;
   top:110px;
   color: white;
-  font-family: 'Duru Sans';
+  font-family: 'Varela';
   text-shadow: 3px 3px #5B5B5B;
+}
+.stepslabel {
+  font-size: 30pt;
+}
+
+.km {
+  color: white;
+  text-align: center;
+  font-size: 30pt;
+  text-shadow: 2px 2px #5b5b5b;
 }
 
 .signin {
