@@ -1,5 +1,5 @@
 /**
- * Jawbone UP Total steps since some number of days ago.
+ * Jawbone UP Total steps.
  * @author Ryan Seys
  */
 
