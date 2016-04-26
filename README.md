@@ -3,6 +3,8 @@ steps
 
 Total steps on Jawbone UP
 
+![Screenshot](screenshots/steps.png)
+
 ## Usage
 
 ```
